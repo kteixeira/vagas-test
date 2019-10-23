@@ -45,7 +45,7 @@ Com a aplicação em execução e o banco inicializado e estruturado, precisamos
 
 ## Rodando os testes
 
-Para garantir o bom funcionamento da aplicação, rote os testes:
+Para garantir o bom funcionamento da aplicação, rode os testes:
 
 ```
 docker-compose exec web rails test
