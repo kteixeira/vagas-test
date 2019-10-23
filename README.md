@@ -14,6 +14,10 @@ Para resolver este problema foi criada uma API em que o recrutador encontrará r
 
 De acordo com as informações coletadas, há um recurso para o recrutador analisar um ranking de candidatos para cada vaga. Para a criação do ranking, é necessária a computação dos dados criteriosos.
 
+--------------------------------
+* [Processo Seletivo Vagas - Engenheiro(a) de Software](https://github.com/VAGAScom/desafio-tecnico/blob/master/desafio-tecnico.md) 
+--------------------------------
+
 ## Pré Requisitos
 
 - Docker
