@@ -11,7 +11,7 @@ module V1
             candidate_transformer = CandidateTransformer.new
             candidate_transform = candidate_transformer.transform(candidate)
             
-            render json: {status: 'sucess', message: 'Artigos carregados', data: candidate_transform}, status: :created
+            render json: {status: 'sucess', message: 'Pessoa criada!', data: candidate_transform}, status: :created
         end
     
         def candidates_params

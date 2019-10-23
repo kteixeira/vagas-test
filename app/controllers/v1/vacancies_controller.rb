@@ -11,7 +11,7 @@ module V1
             vacancy_transformer = VacancyTransformer.new
             vacancy_transform = vacancy_transformer.transform(vacancy)
             
-            render json: {status: 'SUCCESS', message: 'Artigos carregados', data: vacancy_transform},status: :created
+            render json: {status: 'success', message: 'Vaga criada!', data: vacancy_transform},status: :created
         end
 
         def ranking_candidatures
