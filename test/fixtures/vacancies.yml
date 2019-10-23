@@ -1,0 +1,8 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: Vagas
+  title: BackEnd Developer
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  location: A
+  level: 3

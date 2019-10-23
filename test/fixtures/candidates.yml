@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Kaio Leal
+  profession: Backend Developer Jr
+  location: E
+  level: 2
+
+two:
+  name: Kaio Leal 
+  profession: BackEnd Developer Pl
+  location: C
+  level: 3
+
+three:
+  name: Kaio Leal 
+  profession: BackEnd Developer Sr
+  location: F
+  level: 4
+
+four:
+  name: Kaio Leal
+  profession: BackEnd Developer Spec
+  location: E
+  level: 5
+
+

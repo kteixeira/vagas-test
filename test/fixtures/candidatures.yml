@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vacancy: one
+  candidate: one
+  score: 113
+
+two:
+  vacancy: one
+  candidate: two
+  score: 125
+
+three:
+  vacancy: one
+  candidate: three
+  score: 138
