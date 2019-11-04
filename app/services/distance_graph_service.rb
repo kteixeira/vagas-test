@@ -3,7 +3,7 @@ class DistanceGraphService
 	def initialize
 		@graph = {}	 # the graph // {node => { edge1 => weight, edge2 => weight}, node2 => ...
 		@nodes = Array.new		 
-		@INFINITY = 1 << 64 	 
+		@infinity = 1 << 64 	 
 	end
 		
 	def add_edge(source, target, weight)
@@ -35,7 +35,7 @@ class DistanceGraphService
 		@distance = {}
 		@prev = {}
 		@nodes.each do |node|
-			@distance[node] = @INFINITY
+			@distance[node] = @infinity
 			@prev[node] = -1
 		end	
 		@distance[source] = 0
@@ -47,7 +47,7 @@ class DistanceGraphService
 					u = min
 				end
 			end
-			if (@distance[u] == @INFINITY)
+			if (@distance[u] == @infinity)
 				break
 			end
 			node_compressed = node_compressed - [u]
@@ -74,7 +74,7 @@ class DistanceGraphService
 		@source = source
         dijkstra source
         
-        if @distance[dest] != @INFINITY
+        if @distance[dest] != @infinity
             return @distance[dest]
         end
 	end
