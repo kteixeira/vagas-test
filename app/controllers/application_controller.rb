@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
-    def render_unprocessable_entity_response(resource)
-        render json: {status: 'error', errors: resource.errors}, status: :unprocessable_entity
+    def render_unprocessable_entity_response(errors)
+        render json: {status: 'error', errors: errors}, status: :unprocessable_entity
     end
 
     rescue_from ActiveRecord::RecordNotFound do

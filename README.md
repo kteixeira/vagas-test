@@ -1,5 +1,12 @@
 # Teste em Ruby - Algoritmo de Dijkstra para Matching em Vagas
 
+## Sobre
+
+- O padrão utilizado no projeto foi o **MVC**.
+- Embora eu não tenha experiência prévia em Ruby On Rails, resolvi me desafiar. 
+- Embora eu não tenha experiência com grafos, coincidentemente era um tema em que eu estava estudando na semana que me pediram o teste. 
+- Resolvi fazer algumas alterações por incômodo por novas mudanças
+
 ## Descrição
 
 Um recrutador precisa analisar as candidaturas recebidas para vagas de emprego. Dado o grande volume de candidaturas em algumas vagas, olhar um a um seria um trabalho muito demorado.
@@ -111,7 +118,7 @@ POST http://localhost:9000/v1/pessoas
 
 ```
 {
-    "status": "sucess",
+    "status": "success",
     "message": "Pessoa criada!",
     "data": {
         "id": 2,

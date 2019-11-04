@@ -1,11 +1,16 @@
 module V1
     class VacanciesController < ApplicationController
         def create
-            vacancy = Vacancy.new 
-            vacancy = vacancy.save_manual_data(vacancy, vacancies_params)
+            vacancy = Vacancy.create(
+                company: vacancies_params[:empresa],
+                title: vacancies_params[:titulo],
+                description: vacancies_params[:descricao],
+                location: vacancies_params[:localizacao],
+                level: vacancies_params[:nivel],
+            )
 
             if !vacancy.errors.empty?
-                return render_unprocessable_entity_response vacancy
+                return render_unprocessable_entity_response vacancy.errors
             end
 
             vacancy_transformer = VacancyTransformer.new

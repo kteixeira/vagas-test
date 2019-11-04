@@ -15,8 +15,6 @@ class VacanciesControllerTest < ActionDispatch::IntegrationTest
         post "/v1/vagas",
         params: { empresa: "VAGAS.com", titulo: "Engenheiro de Software Pl/Sr", nivel: 4 }
         
-        json_response = JSON.parse(response.body)
-        
         assert_response :unprocessable_entity
     end
 
