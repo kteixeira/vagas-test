@@ -3,6 +3,7 @@
 ## Sobre
 
 - O padrão utilizado no projeto foi o **MVC**.
+- O algoritmo Dijkstra foi utilizado para calcular a menor distância entre dois pontos.
 - Embora eu não tenha experiência prévia em Ruby On Rails, resolvi me desafiar. 
 - Embora eu não tenha experiência com grafos, coincidentemente era um tema em que eu estava estudando na semana que me pediram o teste. 
 - Resolvi fazer algumas alterações por incômodo por novas mudanças
