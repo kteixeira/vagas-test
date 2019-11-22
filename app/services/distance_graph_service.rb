@@ -32,30 +32,30 @@ class DistanceGraphService
 	
 	# based of wikipedia's pseudocode: http://en.wikipedia.org/wiki/Dijkstra's_algorithm
 	def dijkstra(source)
-		@distance = {}
-		@prev = {}
+		@distances = {}
+		@predecessor_node = {}
 		@nodes.each do |node|
-			@distance[node] = @infinity
-			@prev[node] = -1
+			@distances[node] = @infinity
+			@predecessor_node[node] = -1
 		end	
-		@distance[source] = 0
-		node_compressed = @nodes.compact
-		while (node_compressed.size > 0)
-			u = nil;
-			node_compressed.each do |min|
-				if (not u) or (@distance[min] and @distance[min] < @distance[u])
-					u = min
+		@distances[source] = 0
+		nodes_compressed = @nodes.compact
+		while (nodes_compressed.size > 0)
+			node_near = nil;
+			nodes_compressed.each do |node_compressed|
+				if (not node_near) or (@distances[node_compressed] and @distances[node_compressed] < @distances[node_near])
+					node_near = node_compressed
 				end
 			end
-			if (@distance[u] == @infinity)
+			if (@distances[node_near] == @infinity)
 				break
 			end
-			node_compressed = node_compressed - [u]
-			@graph[u].keys.each do |v|
-				alt = @distance[u] + @graph[u][v]
-				if (alt < @distance[v])
-					@distance[v] = alt
-					@prev[v]  = u
+			nodes_compressed = nodes_compressed - [node_near]
+			@graph[node_near].keys.each do |neighbor_node|
+				total_distance = @distances[node_near] + @graph[node_near][neighbor_node]
+				if (total_distance < @distances[neighbor_node])
+					@distances[neighbor_node] = total_distance
+					@predecessor_node[neighbor_node] = node_near
 				end
 			end
 		end
@@ -63,8 +63,8 @@ class DistanceGraphService
 	
 	# to print the full shortest route to a node
 	def print_path(dest)
-		if @prev[dest] != -1
-			print_path @prev[dest]
+		if @predecessor_node[dest] != -1
+			print_path @predecessor_node[dest]
 		end
 		print ">#{dest}"
 	end
@@ -74,8 +74,8 @@ class DistanceGraphService
 		@source = source
         dijkstra source
         
-        if @distance[dest] != @infinity
-            return @distance[dest]
+        if @distances[dest] != @infinity
+            return @distances[dest]
         end
 	end
 end
