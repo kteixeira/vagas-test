@@ -6,6 +6,7 @@ module V1
                 profession: candidates_params[:profissao],
                 location: candidates_params[:localizacao],
                 level: candidates_params[:nivel],
+                objective: candidates_params[:objetivo],
             )
 
             if !candidate.errors.empty?
@@ -19,7 +20,7 @@ module V1
         end
     
         def candidates_params
-            @form_params = params.permit(:nome, :profissao, :localizacao, :nivel)
+            @form_params = params.permit(:nome, :profissao, :localizacao, :nivel, :objetivo)
         end
     end
 end

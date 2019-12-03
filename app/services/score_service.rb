@@ -42,6 +42,14 @@ class ScoreService
         return 100 - 25 * (vacancy_experience - candidate_experience)
     end
 
+    def add_objective_percent(score, candidate_objective, vacancy_description)
+        if(vacancy_description.include? candidate_objective)
+            return score + (score * 0.2) 
+        end
+
+        return score
+    end
+
     # calculating the score according to the business rule 
     def calculating_score(source, target, vacancy_experience, candidate_experience)
         distance = distance(source, target)

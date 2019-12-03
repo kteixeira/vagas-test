@@ -5,23 +5,27 @@ one:
   profession: Backend Developer Jr
   location: E
   level: 2
+  objective: Desenvolvedor
 
 two:
   name: Kaio Leal 
   profession: BackEnd Developer Pl
   location: C
   level: 3
+  objective: Desenvolvedor
 
 three:
   name: Kaio Leal 
   profession: BackEnd Developer Sr
   location: F
   level: 4
+  objective: Cozinheiro
 
 four:
   name: Kaio Leal
   profession: BackEnd Developer Spec
   location: E
   level: 5
+  objective: Desenvolvedor
 
 

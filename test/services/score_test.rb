@@ -20,4 +20,9 @@ class ScoreTest < ActiveSupport::TestCase
         score = ScoreService.new
         assert_equal(87, score.calculating_score("e", "a", 3, 5))
     end
+
+    test "should return score 104.4" do
+        score = ScoreService.new
+        assert_equal(104.4, score.add_objective_percent(87, "Desenvolvedor", "Preciso de um Desenvolvedor Pleno Urgente"))
+    end
 end

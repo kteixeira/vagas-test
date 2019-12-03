@@ -110,7 +110,8 @@ POST http://localhost:9000/v1/pessoas
     "nome": "John Doe",
     "profissao": "Engenheiro de Software",
     "localizacao": "C",
-    "nivel": 2
+    "nivel": 2,
+    "objetivo": "Desenvolvedor"
 }
 ```
 ### Response

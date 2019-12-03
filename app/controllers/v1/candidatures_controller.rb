@@ -13,12 +13,13 @@ module V1
             end
             
             score_service = ScoreService.new
-            score = score_service.calculating_score(vacancy.location, candidate.location, vacancy.level, candidate.level)
+            score_without_percent = score_service.calculating_score(vacancy.location, candidate.location, vacancy.level, candidate.level)
+            score_with_percent = score_service.add_objective_percent(score_without_percent, candidate.objective, vacancy.description)
 
             candidature = Candidature.create(
                 id_vacancy: candidatures_params[:id_vaga],
                 id_candidate: candidatures_params[:id_pessoa],
-                score: score,
+                score: score_with_percent,
             )
 
             if !candidature.errors.empty?

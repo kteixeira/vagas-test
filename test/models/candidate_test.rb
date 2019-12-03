@@ -7,6 +7,7 @@ class CandidateTest < ActiveSupport::TestCase
         candidate.profession = "Desenvolvedor"
         candidate.location = "C"
         candidate.level = 3
+        candidate.objective = "Desenvolvedor"
 
         assert candidate.save
     end
@@ -55,6 +56,16 @@ class CandidateTest < ActiveSupport::TestCase
         candidate.profession = "Desenvolvedor"
         candidate.location = "C"
         candidate.level = "aA"
+
+        assert_not candidate.save
+    end
+
+    test "should not save by missing the field objective" do
+        candidate = Candidate.new
+        candidate.name = "Kaio Teixeira"
+        candidate.profession = "Desenvolvedor"
+        candidate.location = "C"
+        candidate.level = 3
 
         assert_not candidate.save
     end

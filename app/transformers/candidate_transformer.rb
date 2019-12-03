@@ -6,6 +6,7 @@ class CandidateTransformer
             profissao: candidate.profession,
             localizacao: candidate.location,
             nivel: candidate.level,
+            objetivo: candidate.objective,
         }
     end
 end
