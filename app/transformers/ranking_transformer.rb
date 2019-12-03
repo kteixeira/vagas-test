@@ -5,9 +5,9 @@ class RankingTransformer
         for candidature in candidatures
             data_transformed.push({
                 nome: candidature.candidate.name,
-                profissao: candidature.candidate.name,
-                localizacao: candidature.candidate.name,
-                nivel: candidature.candidate.name,
+                profissao: candidature.candidate.profession,
+                localizacao: candidature.candidate.location,
+                nivel: candidature.candidate.level,
                 score: candidature.score,
             })
         end
